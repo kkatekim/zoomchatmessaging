@@ -16,6 +16,10 @@ def readAndWrite(inputFile, outputFile):
     f.close()
     o.close()
 
+if __name__ == '__main__':
+    readAndWrite("meeting_saved_chat.txt", "output.txt")
+
+
 
 
 

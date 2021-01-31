@@ -4,7 +4,7 @@ from tkinter import filedialog, Text #help us pick the apps
 import os #allows us to run the apps into our apps
 
 root = tk.Tk()# holds the whole apps
-root.title("Zoom Chat Parser")
+root.title("z'ami")
 
 canvas = tk.Canvas(root, height=800, width=700, bg="#b3e3ff")
 canvas.pack()

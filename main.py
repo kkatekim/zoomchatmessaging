@@ -7,7 +7,6 @@ def readAndWrite(inputFile, pathname):
     convo = f.readlines()
 
     users = []
-    lines = []
     filenames = []
 
     #finds all private messages 

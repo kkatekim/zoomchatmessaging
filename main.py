@@ -27,7 +27,6 @@ def readAndWrite(inputFile, pathname):
                 users.append(" ".join(name2))
 
             matches = {users.index(y):a_line.find(y) for y in users if y in a_line}
-            print(matches)
 
             filename = os.path.join(pathname, str(users[list(matches.keys())[0]] + " " + users[list(matches.keys())[1]] + ".txt"))
 
@@ -40,9 +39,7 @@ def readAndWrite(inputFile, pathname):
             else:
                 o = open(filename, "a")
 
-
             o.write(speaker + a_line.split(")", 1)[1])
             o.close()
         
-
     f.close()

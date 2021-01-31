@@ -1,0 +1,12 @@
+00:18:48	 From  Kate Kim : hello
+00:18:48	 From  Kate Kim : my
+00:18:49	 From  Kate Kim : name
+00:18:51	 From  Kate Kim : is kate
+00:18:54	 From  Noah Finestone : hi
+00:18:55	 From  Wissam Mantash : woo
+00:18:56	 From  Wissam Mantash : hiii
+00:18:58	 From  Kate Kim  to  Noah Finestone(Direct Message) : private message
+00:19:04	 From  Kate Kim  to  Wissam Mantash(Direct Message) : hello
+00:19:06	 From  Kate Kim  to  Wissam Mantash(Direct Message) : stuff
+00:19:27	 From  Wissam Mantash  to  Kate Kim(Direct Message) : whats upopp
+00:19:41	 From  Kate Kim  to  Wissam Mantash(Direct Message) : im upopp

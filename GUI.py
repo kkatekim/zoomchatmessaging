@@ -1,4 +1,5 @@
 import tkinter as tk
+from PIL import Image, ImageTk
 from tkinter import filedialog, Text #help us pick the apps
 import os #allows us to run the apps into our apps
 
@@ -66,7 +67,14 @@ def readAndWrite():
     f.close()
 
 frame = tk.Frame(root, bg="white")
-frame.place(relwidth=0.9, relheight=0.9, relx=0.05, rely=0.05)
+frame.place(relwidth=0.8, relheight=0.8, relx=0.1, rely=0.1)
+
+
+
+pil_img = Image.open("pic.jpg")
+img = ImageTk.PhotoImage(pil_img.resize((700, 800), Image.ANTIALIAS))
+bg = canvas.create_image(0, 0, anchor=tk.NW, image=img)
+
 
 
 openFile = tk.Button(frame, text="Open File", padx=10, pady=5,

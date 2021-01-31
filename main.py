@@ -1,34 +1,44 @@
+import os.path
 
-def readAndWrite(inputFile, outputFile):
+def readAndWrite(inputFile, pathname):
 
     f = open(inputFile, 'r')
-    o = open(outputFile, 'w')
 
     convo = f.readlines()
 
-    name1 = input("Please enter the first and last name of first user: ")
-    name2 = input("Please enter the first and last name of second user: ")
+    users = []
+    filenames = []
 
+    #finds all private messages 
     for a_line in convo:
-        if name1 or name2 in a_line:
-            o.write(a_line)
 
+        x = a_line.replace("(", " ", 1).split()
+
+        if "Direct Message" in a_line:
+            
+            name1 = [x[i] for i in range(x.index("From")+1, x.index("to"))]
+            name2 = [x[i] for i in range(x.index("to")+1, x.index("Direct"))]
+
+            if " ".join(name1) not in users: 
+                users.append(" ".join(name1))
+
+            if " ".join(name2) not in users: 
+                users.append(" ".join(name2))
+
+            matches = {users.index(y):a_line.find(y) for y in users if y in a_line}
+
+            filename = os.path.join(pathname, str(users[list(matches.keys())[0]] + " " + users[list(matches.keys())[1]] + ".txt"))
+
+            speaker = str(users[min(matches, key=matches.get)])
+
+            if filename not in filenames:
+                filenames.append(filename)
+                o = open(filename, "w")
+
+            else:
+                o = open(filename, "a")
+
+            o.write(speaker + a_line.split(")", 1)[1])
+            o.close()
+        
     f.close()
-    o.close()
-
-if __name__ == '__main__':
-    readAndWrite("meeting_saved_chat.txt", "output.txt")
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -46,6 +46,3 @@ def readAndWrite(inputFile, pathname):
         
 
     f.close()
-
-if __name__ == '__main__':
-   readAndWrite("example.txt", r"C:\Users\kkate\Downloads\\")

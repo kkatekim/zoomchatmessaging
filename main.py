@@ -1,5 +1,6 @@
 import os.path
 
+#main function
 def readAndWrite(inputFile, pathname):
 
     f = open(inputFile, 'r')
